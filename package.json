@@ -1,6 +1,6 @@
 {
   "name": "busybee-rally",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper for communicating with Rally",
   "main": "index.js",
   "author": "Simon Townsend",
