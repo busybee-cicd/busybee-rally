@@ -1,0 +1,11 @@
+{
+  "name": "busybee-rally",
+  "version": "1.0.0",
+  "description": "Wrapper for communicating with Rally",
+  "main": "index.js",
+  "author": "Simon Townsend",
+  "license": "ISC",
+  "dependencies": {
+    "rally": "^2.1.2"
+  }
+}
