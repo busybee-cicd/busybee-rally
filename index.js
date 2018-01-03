@@ -4,16 +4,29 @@ const DEFAULT_FETCH = ['Name', 'ObjectID'];
 const Logger = require('./Logger');
 const logger = new Logger();
 
+const REQUIRED = ['workspace', 'project', 'testFolder', 'apiKey', 'user', 'requestOptions'];
+
 class BusybeeRally {
 
   constructor(conf) {
     this.conf = conf;
-    let rallyConf = conf.rally;
-    if (!rallyConf.project) {
-      throw new Error(`'rally.project' is a required field. skipping ${step} step.`);
+
+    let failures = [];
+    REQUIRED.forEach(key => {
+      if (!conf[key]) {
+        failures.push(key);
+      }
+    });
+
+    if (failures.length > 0) {
+      if (failures.length === 1) {
+        throw  new Error(`'${failures[0]}' is a required configuration key`);
+      } else {
+        throw new Error(`'${failures.join(',')}' are required configuration keys`);
+      }
     }
 
-    this.api = rally(rallyConf);
+    this.api = rally(this.conf);
   }
 
   /*
