@@ -1,7 +1,7 @@
 const rally = require('rally');
 const queryUtils = rally.util.query;
 const DEFAULT_FETCH = ['Name', 'ObjectID'];
-const Logger = require('./Logger');
+const Logger = require('./lib/Logger');
 const logger = new Logger();
 
 const REQUIRED = ['workspace', 'project', 'testFolder', 'apiKey', 'user', 'requestOptions'];
