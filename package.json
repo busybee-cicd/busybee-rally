@@ -4,11 +4,8 @@
   "description": "Wrapper for communicating with Rally",
   "main": "index.js",
   "author": "Simon Townsend",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "rally": "^2.1.2"
-  },
-  "publishConfig": {
-    "registry": "https://devcloud.swcoe.ge.com/artifactory/api/npm/OAMFZ/"
   }
 }
